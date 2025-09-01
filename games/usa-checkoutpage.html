@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="/styles/spendthebudget.css" />
+  <link rel="stylesheet" href="/styles/usa-spendthebudget.css" />
+  <link rel="stylesheet" href="/styles/usa-checkoutpage.css" />
+</head>
+<body>
+    <div class="top-bar">
+      <div id="main">
+        <a href="/games.html" class="x-button" id="reset-btn">x</a> 
+        <h1 class="title">SPEND THE BUDGET (USA)</h1>   
+      </div> 
+    </div>
+    <div id="the-caption">
+        <h2 class="caption">Pick a country. Get the average salary. Spend it all wisely.....or not.</h2>
+    </div>
+    <body>
+      <h1 class="receipt-title">Your Receipt</h1>
+      <div class="receipt-container">
+        <div class="full-receipt" id="receipt"></div>
+      </div>
+    </body>
+    <div class="checkout">
+      <a href="usa-spendthebudget.html" class="play-again-btn" id="play-again-id"onclick="resetGame()">Play Again</a>
+    </div>
+    
+    <script>
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let receiptDiv = document.getElementById("receipt");
+
+      if (cart.length === 0) {
+        receiptDiv.innerHTML = "<p>No items purchased.</p>";
+      } else {
+        let total = 0;
+        cart.forEach(item => {
+          let itemTotal = item.price * item.quantity;
+          total += itemTotal;
+          receiptDiv.innerHTML += `${item.name} x ${item.quantity}: <strong>$${itemTotal}</strong><br>`;
+        })
+        receiptDiv.innerHTML += `<strong>Total: $${total}</strong>`;
+      }
+
+      document.getElementById("play-again-id").addEventListener("click", () => {
+      localStorage.setItem("budget", 65000);
+      localStorage.setItem("cart", JSON.stringify([]));
+      })
+    </script>
+    <script src="/scripts/spendthebudget.js"></script>
+    <script src="/scripts/usa-spendthebudget.js"></script>
+</body>
+</html>

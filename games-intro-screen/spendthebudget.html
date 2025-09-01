@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="/styles/spendthebudget.css" />
+</head>
+<body>
+    <div class="top-bar">
+      <div id="main">
+        <a href="/games.html" class="x-button" id="reset-btn">x</a> 
+        <h1 class="title">SPEND THE BUDGET</h1>
+      </div>    
+    </div>
+    <div id="the-caption">
+        <h2 class="caption">Pick a country. Get the average salary. Spend it all wisely.....or not.</h2>
+    </div>
+    <div id="dropdown">
+      <div class="chose-your-country-dropdown">
+        <button onclick="chooseCountryDropdown()" class="dropdown-btn">Choose Your Country</button>
+        <div id="countryDropdown" class="dropdown-content">
+          <a href="/games/usa-spendthebudget.html">USA
+            <img src="https://flagcdn.com/40x30/us.png" srcset="https://flagcdn.com/80x60/us.png 2x,https://flagcdn.com/120x90/us.png 3x" width="16"height="12" alt="United States"></a>
+          <a href="#">Philippines 
+            <img src="https://flagcdn.com/16x12/ph.png" srcset="https://flagcdn.com/32x24/ph.png 2x, https://flagcdn.com/48x36/ph.png 3x" width="16" height="12" alt="Philippines"></a>
+          <a href="#">Japan 
+            <img src="https://flagcdn.com/16x12/jp.png" srcset="https://flagcdn.com/32x24/jp.png 2x,https://flagcdn.com/48x36/jp.png 3x" width="16" height="12" alt="Japan"></a>
+        </div>
+      </div> 
+    </div>
+    
+    
+    <script src="/scripts/spendthebudget.js"></script>
+</body>
+</html>

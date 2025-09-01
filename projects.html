@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles/cards.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/projects.css" />
+</head>
+<body>
+    <div id="js-sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">x</a>
+        <h1>trev:</h1>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="journal.html">Journal</a>
+        <a href="videos.html">Videos</a>
+        <a href="games.html">Games</a>
+    </div>
+    <div class="top-bar">
+      <div id="main">
+        <h1 class="open-btn" onclick="openNav()">trev:</h1>   
+      </div>
+      <div id="title">
+        <h2>Projects</h2>
+      </div>   
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <img src="images/Volunteer.png" style="margin-top: 10px">
+        <div class="card-content">
+          <h3>South Bay Volunteer Circle</h3>
+          <h4>South Bay Volunteer Circle helps connect high school students with volunteer and internship opportunities.</h4>
+          <a href="https://southbayvolunteercircle.netlify.app/" target="_blank" class="btn">Website</a>
+          <a href="https://github.com/tgriarte26/south-bay-volunteer-circle" target="_blank" class="btn">Github</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/javascriptlogo.png" style="width: 30%; margin-top: 10px">
+        <div class="card-content">
+          <h3>Intro to JavaScript Curriculum</h3>
+          <h4>This curriculum is used by <a href="https://www.stemforothers.org/" style="color: #6c80dd; font-size: 1rem">STEM for Others®</a> to teach JavaScript to disadvantaged elementary students in the United States.</h4>
+          <a href="https://docs.google.com/presentation/d/1RH2EXumjk8BI5vJfKDzkATAO7YGAF7ClUBOr3ZtHzw8/edit?usp=sharing" target="_blank" class="btn">Slides</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/scratchlogo.png" style="width: 85%; margin-top: 2px;">
+        <div class="card-content">
+          <h3>Intro to Scratch Curriculum</h3>
+          <h4>This curriculum is used by <a href="https://www.stemforothers.org/" style="color: #6c80dd; font-size: 1rem">STEM for Others®</a> to teach Scratch to disadvantaged elementary students in the United States.</h4>
+          <a href="https://docs.google.com/presentation/d/1cBcOZJ7lXuoRuTZdH8VjTCHQ6Csy0OzUn5CCEEg_0ek/edit?usp=sharing" target="_blank" class="btn">Slides</a>
+        </div>
+      </div>
+    </div>
+    
+    <script src="scripts/projects.js"></script>
+</body>
+</html>

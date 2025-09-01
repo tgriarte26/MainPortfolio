@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:wght@500&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playpen+Sans:wght@100..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* The sidebar menu */
+.sidebar {
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: #292727; 
+  overflow-x: hidden; 
+  transition: 0.5s;
+  padding-top: 20px;
+}
+
+.sidebar h1 {
+  padding-left: 1.5rem;
+}
+.sidebar a {
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  font-size: 25px;
+  color: #898686;
+  display: block;
+}
+
+body {
+  background-color: #ffffff; 
+  color: black;            
+  font-family: "Playpen Sans";
+  line-height: 1.6;
+  
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #444;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #fff;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+.sidebar h1 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+#main h1 {
+  padding: 20px;
+  color: black;
+  font-family: "Playpen Sans";
+  
+}
+
+h2 {
+  color: #6c80dd;
+  font-size: 2.5rem;
+}
+
+p {
+  color: #6c80dd;
+  font-size: 2rem;
+  margin: 0;
+}
+
+li {
+  font-size: 2rem;
+}
+
+footer {
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+@media screen and (max-height: 400px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.open-btn {
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+
+.sidebar .close-btn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#title, #content {
+  transition: margin-left .5s; 
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+}
+
+.card-container {
+  transition: margin-left 0.3s ease;
+}
+
+.shifted {
+  margin-left: 250px;
+}
+
+hr {
+  height: 2px;
+  border-width: 0;
+  color: gray;
+  background-color:gray;
+}
+
+.center-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  gap: 12px;
+}
+
+.resume-section {
+  display: flex;
+  align-items:center;
+  padding-left: 1rem;
+  gap: 10px;
+}
+
+.download-resume-btn {
+  font-size: 1rem;
+  font-family: "Playpen Sans";
+  padding: 10px 30px;
+  margin-top: 7.5px;
+  border: 2px solid black;
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  color: black;
+}
+
+.download-resume-btn:hover {
+  background: #6c80dd;
+  color: white;
+}

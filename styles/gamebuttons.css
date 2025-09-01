@@ -1,0 +1,32 @@
+.neal-button-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #6c80dd;
+  color: white;
+  text-decoration: none;
+  padding: 40px 70px;
+  border-radius: 12px;
+  font-size: 24px;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  gap: 12px;
+}
+
+.neal-button-link img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.neal-button-link:hover {
+  background-color: #5869b8;
+  transform: translateY(-5px);
+}
+
+.neal-button-link:active {
+  transform: translateY(1px);
+  background-color: #5869b8;
+}
