@@ -1,3 +1,11 @@
-.btn:hover {
+.btn-website:hover {
   background-color: #46bd7d;
+}
+
+.btn-github:hover {
+  background-color: #bd4646;
+}
+
+.btn-slides:hover {
+  background-color: #bdbd2e;
 }

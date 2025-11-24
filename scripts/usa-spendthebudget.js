@@ -4,32 +4,64 @@ let cart = [];
 document.addEventListener("DOMContentLoaded", () => {
   const buyButtons = document.querySelectorAll(".buy-button");
   const sellButtons = document.querySelectorAll(".sell-button");
+  clickAndHoldBuyButtons(buyButtons);
+  clickAndHoldSellButtons(sellButtons);
+
+  // when typing into input, change price based on number
+  // don't allow typing of non-numbers
+  const inputField = document.querySelectorAll(".input-quantity");
   
   budget = parseInt(localStorage.getItem("budget")) || 65000;
   document.getElementById("budget").textContent = budget;
 
   cart = JSON.parse(localStorage.getItem("cart")) || [];
+  
+  function clickAndHoldBuyButtons(buyButtons) {
+    const DURATION = 100;
 
-  buyButtons.forEach((buyButton) => {
-    buyButton.addEventListener("click", (event) => {
-      const input = buyButton.previousElementSibling;
-      let currentValue = parseInt(input.value) || 0;
-      input.value = currentValue + 1;
+    buyButtons.forEach((buyButton) => {
+      let timerId;
 
-      buyItem(parseInt(buyButton.dataset.price), event);
+      const clickBuy = (event) => {
+          const input = buyButton.previousElementSibling;
+          let currentValue = parseInt(input.value) || 0;
+          input.value = currentValue + 1;
+          buyItem(parseInt(buyButton.dataset.price), event);
+      };
+
+      buyButton.addEventListener("mousedown", (event) => {
+        clickBuy(event);
+        timerId = setInterval(() => clickBuy(event), DURATION);
+      });
+
+      buyButton.addEventListener("mouseup", () => clearInterval(timerId));
+      buyButton.addEventListener("mouseout", () => clearInterval(timerId));
     });
-  });
+  };
 
-  sellButtons.forEach((sellButton) => {
-    sellButton.addEventListener("click", (event) => {
-      const input = sellButton.nextElementSibling;
-      let currentValue = parseInt(input.value) || 0;
-      if (currentValue > 0) {
-        input.value = currentValue - 1;
-        sellItem(parseInt(sellButton.dataset.price), event);
-      }
+  function clickAndHoldSellButtons(sellButtons) {
+    const DURATION = 100;
+    sellButtons.forEach((sellButton) => {
+      let timerId;
+
+      const clickSell = (event) => {
+        const input = sellButton.nextElementSibling;
+        let currentValue = parseInt(input.value) || 0;
+        if (currentValue > 0) {
+          input.value = currentValue - 1;
+          sellItem(parseInt(sellButton.dataset.price), event);
+        }
+      };
+
+      sellButton.addEventListener("mousedown", (event) => {
+        clickSell(event);
+        timerId = setInterval(() => clickSell(event), DURATION);
+      });
+
+      sellButton.addEventListener("mouseup", () => clearInterval(timerId));
+      sellButton.addEventListener("mouseout", () => clearInterval(timerId));
     });
-  });
+  };
 });
 
 
