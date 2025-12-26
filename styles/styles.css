@@ -91,13 +91,14 @@ li {
   font-size: 2rem;
 }
 
-footer {
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #6c80dd;
+  color: white;
   text-align: center;
-  border-top: 1px solid #444;
-  padding-top: 1rem;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: #aaa;
 }
 
 @media screen and (max-height: 400px) {
