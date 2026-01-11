@@ -19,11 +19,11 @@ body {
   text-align: center;
   width: 350px;
   background-color: #f0f0f0;
-  border-radius: 8px;
+  border-radius: 30px;
   overflow: hidden;
-  box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+  box-shadow: 11px 11px #3f4b8a;
   margin: 20px;
-  border: 7px solid #6c80dd
+  border: 8px solid #6c80dd;
 }
 
 .card img {
@@ -53,4 +53,11 @@ body {
   text-decoration: none;
   border-radius: 4px;
   margin-top: 16px;
+  box-shadow: 3px 3px gray;
+}
+
+.card-background {
+  display: absolute;
+  background-color: #333;
+  
 }
