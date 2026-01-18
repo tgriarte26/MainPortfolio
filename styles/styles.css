@@ -6,10 +6,26 @@
   box-sizing: border-box;
 }
 
+.sidebar a.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: #fff;
+}
+
+.sidebar a.active {
+  position: relative;
+  color: #fff;
+}
+
+
 /* The sidebar menu */
 .sidebar {
   height: 100%; 
-  width: 0; 
+  width: 300px; 
   position: fixed; 
   z-index: 1; 
   top: 0; 
@@ -69,6 +85,10 @@ section {
   font-size: 2rem;
 }
 
+.sidebar-highlight {
+  color: #fff;
+}
+
 #main h1 {
   padding: 20px;
   color: black;
@@ -122,7 +142,8 @@ li {
 }
 
 #title, #content {
-  transition: margin-left .5s; 
+  margin-left: 0;
+  transition: margin-left .5s ease; 
 }
 
 .top-bar {
@@ -179,4 +200,8 @@ hr {
 .download-resume-btn:hover {
   background: #6c80dd;
   color: white;
+}
+
+.no-transition {
+  transition: none !important;
 }
